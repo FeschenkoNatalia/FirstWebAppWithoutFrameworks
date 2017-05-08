@@ -1,0 +1,27 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>MyMainServlet</servlet-name>
+        <servlet-class>com.natalia.servlet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyMainServlet</servlet-name>
+        <url-pattern>/root/*</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+    <filter-name>UserFilter</filter-name>
+    <filter-class>com.natalia.filter.UserFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+    <filter-name>UserFilter</filter-name>
+    <url-pattern>/root/*</url-pattern>
+    </filter-mapping>
+
+</web-app>
